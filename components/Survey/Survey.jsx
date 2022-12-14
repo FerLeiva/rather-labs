@@ -27,11 +27,11 @@ export default function Survey({ questions }) {
   };
 
   useEffect(() => {
-    cooldown === 0 && !finish
-      ? handleNextQuestion()
-      : !finish && cooldown !== 0
-      ? (time = setTimeout(low, 1000))
-      : null;
+    if (cooldown === 0 && !finish) {
+      handleNextQuestion();
+    } else {
+      !finish && cooldown !== 0 ? (time = setTimeout(low, 1000)) : null;
+    }
   }, [cooldown]);
 
   useEffect(() => {
@@ -45,17 +45,15 @@ export default function Survey({ questions }) {
           <h1 className={styles.title}>Your answers summary</h1>
           <div className={styles.answersContainer}>
             {answers.map((answer, index) => {
-              return (
-                <div className={styles.answer}>
-                  <h3>
-                    Question number {index + 1}: {questions[index].text}
-                  </h3>
-                  <Image height={100} src={questions[index].image} />
-                  <p>
-                    <strong>Answer:</strong> {questions[index].options[answer].text}
-                  </p>
-                </div>
-              );
+              <div className={styles.answer} key={index}>
+                <h3>
+                  Question number {index + 1}: {questions[index].text}
+                </h3>
+                <Image height={100} src={questions[index].image} />
+                <p>
+                  <strong>Answer:</strong> {questions[index].options[answer].text}
+                </p>
+              </div>;
             })}
           </div>
         </>
@@ -69,7 +67,9 @@ export default function Survey({ questions }) {
             </div>
             <Radio.Group onChange={onChange} value={value}>
               {questions[step].options.map((option, index) => {
-                return <Radio value={index}>{option.text}</Radio>;
+                <Radio value={index} key={index}>
+                  {option.text}
+                </Radio>;
               })}
             </Radio.Group>
           </div>
