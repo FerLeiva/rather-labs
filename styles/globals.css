@@ -1,41 +1,41 @@
 html,
 body {
-    padding: 0;
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
-        Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  padding: 0;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
-    color: inherit;
-    text-decoration: none;
+  color: inherit;
+  text-decoration: none;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .title {
-    font-size: 30px;
-    padding: 0 24px;
+  font-size: 30px;
+  padding: 0 24px;
 }
 
 .surveyImage {
-    max-height: 250px;
-    width: auto;
+  max-height: 250px;
+  width: auto;
 }
 
 .subtitle {
-    font-size: 16px;
-    padding: 12px 15% 0;
+  font-size: 16px;
+  padding: 12px 15% 0;
 }
 
 .button {
-    margin: 24px;
+  margin: 24px;
 }
 
 .accountNumber {
-    text-align: right;
-    font-size: 12px;
-    padding: 12px 24px;
+  text-align: right;
+  font-size: 12px;
+  padding: 12px 24px;
 }

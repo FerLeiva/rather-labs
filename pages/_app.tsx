@@ -4,13 +4,13 @@ import { AppContextProvider } from "../context/Context";
 import { MoralisProvider } from "react-moralis";
 
 function MyApp({ Component, pageProps }: AppProps) {
-    return (
-        <MoralisProvider initializeOnMount={false}>
-            <AppContextProvider>
-                <Component {...pageProps} />
-            </AppContextProvider>
-        </MoralisProvider>
-    );
+  return (
+    <MoralisProvider initializeOnMount={false}>
+      <AppContextProvider>
+        <Component {...pageProps} />
+      </AppContextProvider>
+    </MoralisProvider>
+  );
 }
 
 export default MyApp;
