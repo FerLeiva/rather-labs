@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import useAppContext from "../../context/Context";
 import { Button, Image, Radio } from "antd";
+import ReceiveButton from "../ReceiveButton/ReceiveButton";
 import styles from "./Survey.module.css";
 
 export default function Survey({ questions }) {
@@ -76,7 +77,9 @@ export default function Survey({ questions }) {
         </>
       )}
       {finish ? (
-        <div></div>
+        <div className={styles.buttonContainer}>
+          <ReceiveButton />
+        </div>
       ) : (
         <Button className="button" onClick={handleNextQuestion}>
           Next question
