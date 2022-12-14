@@ -18,10 +18,10 @@ export default function PageLayout({ children, breadcrumbs }) {
 
   const {
     enableWeb3,
+    deactivateWeb3,
     account,
     isWeb3Enabled,
     Moralis,
-    deactivateWeb3,
     isWeb3EnableLoading,
     chainId,
   } = useMoralis();
@@ -58,8 +58,7 @@ export default function PageLayout({ children, breadcrumbs }) {
         ? (window.localStorage.removeItem("connected"), deactivateWeb3())
         : isWeb3Enabled &&
           (async function newAmount() {
-            let tokenAmountNew = await balanceOf();
-            console.log(tokenAmount + parseInt(tokenAmountNew._hex));
+            const tokenAmountNew = await balanceOf();
             setTokenAmount(tokenAmount + parseInt(tokenAmountNew._hex));
           })();
     });
