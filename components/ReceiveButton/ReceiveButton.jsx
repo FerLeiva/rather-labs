@@ -30,17 +30,16 @@ export default function ReceiveButton() {
     },
   });
 
-  const handleClick = () => {
-    account && isWeb3Enabled
-      ? ((async function newAmount() {
-          await submit();
-          let tokenAmountNew = await balanceOf();
-          let quizTokenAmount = parseInt(tokenAmountNew._hex);
-          console.log(tokenAmount + Math.ceil(quizTokenAmount / 1000000000000000000));
-          setTokenAmount(tokenAmount + Math.ceil(quizTokenAmount / 1000000000000000000));
-        })(),
-        router.push("/"))
-      : router.push("/");
+  const handleClick = async () => {
+    if (account && isWeb3Enabled) {
+      await submit();
+      let tokenAmountNew = await balanceOf();
+      let quizTokenAmount = parseInt(tokenAmountNew._hex);
+      setTokenAmount(tokenAmount + Math.ceil(quizTokenAmount / 1000000000000000000));
+      router.push("/");
+    } else {
+      router.push("/");
+    }
   };
 
   useEffect(() => {
