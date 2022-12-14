@@ -42,15 +42,6 @@ export default function ReceiveButton() {
     }
   };
 
-  useEffect(() => {
-    if (isWeb3Enabled) {
-      async function newCooldown() {
-        await setCooldown();
-      }
-      newCooldown();
-    }
-  }, []);
-
   useEffect(() => () => setAnswers([]), []);
 
   return (
