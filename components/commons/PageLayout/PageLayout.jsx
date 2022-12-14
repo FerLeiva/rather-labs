@@ -1,20 +1,20 @@
-import { Breadcrumb, Button, Layout, Menu, theme } from "antd"
-import useAppContext from "../../../context/Context"
-import { useEffect } from "react"
-import { useMoralis, useWeb3Contract } from "react-moralis"
-import styles from "./PageLayout.module.css"
-import { abi, contractAddress } from "../../../constants/index"
-import { useRouter } from "next/router"
+import { Breadcrumb, Button, Layout, Menu, theme } from "antd";
+import useAppContext from "../../../context/Context";
+import { useEffect } from "react";
+import { useMoralis, useWeb3Contract } from "react-moralis";
+import styles from "./PageLayout.module.css";
+import { abi, contractAddress } from "../../../constants/index";
+import { useRouter } from "next/router";
 
-const { Header, Content, Footer } = Layout
+const { Header, Content, Footer } = Layout;
 
 export default function PageLayout({ children, breadcrumbs }) {
     const {
         token: { colorBgContainer },
-    } = theme.useToken()
+    } = theme.useToken();
 
-    const router = useRouter()
-    const { tokenAmount, setTokenAmount } = useAppContext()
+    const router = useRouter();
+    const { tokenAmount, setTokenAmount } = useAppContext();
 
     const {
         enableWeb3,
@@ -24,7 +24,7 @@ export default function PageLayout({ children, breadcrumbs }) {
         deactivateWeb3,
         isWeb3EnableLoading,
         chainId,
-    } = useMoralis()
+    } = useMoralis();
 
     const { runContractFunction: balanceOf } = useWeb3Contract({
         abi: abi,
@@ -34,23 +34,23 @@ export default function PageLayout({ children, breadcrumbs }) {
             account: account,
         },
         account: account,
-    })
+    });
 
     useEffect(() => {
-        if (isWeb3Enabled) return
+        if (isWeb3Enabled) return;
         typeof window !== "undefined"
             ? window.localStorage.getItem("connected")
                 ? enableWeb3()
                 : null
-            : null
-    }, [isWeb3Enabled])
+            : null;
+    }, [isWeb3Enabled]);
 
     useEffect(() => {
         const VerifyChain = async () => {
-            chainId !== "0x5" ? router.push("/") : null
-        }
-        VerifyChain()
-    }, [chainId])
+            chainId !== "0x5" ? router.push("/") : null;
+        };
+        VerifyChain();
+    }, [chainId]);
 
     useEffect(() => {
         Moralis.onAccountChanged((account) => {
@@ -58,12 +58,12 @@ export default function PageLayout({ children, breadcrumbs }) {
                 ? (window.localStorage.removeItem("connected"), deactivateWeb3())
                 : isWeb3Enabled &&
                   (async function newAmount() {
-                      let tokenAmountNew = await balanceOf()
-                      console.log(tokenAmount + parseInt(tokenAmountNew._hex))
-                      setTokenAmount(tokenAmount + parseInt(tokenAmountNew._hex))
-                  })()
-        })
-    }, [])
+                      let tokenAmountNew = await balanceOf();
+                      console.log(tokenAmount + parseInt(tokenAmountNew._hex));
+                      setTokenAmount(tokenAmount + parseInt(tokenAmountNew._hex));
+                  })();
+        });
+    }, []);
 
     return (
         <Layout className={styles.generalLayout}>
@@ -76,12 +76,12 @@ export default function PageLayout({ children, breadcrumbs }) {
                 <div className={styles.userGuide}>
                     <Breadcrumb style={{ margin: "16px 0" }}>
                         {breadcrumbs.map((item, index) => {
-                            const key = index + 1
+                            const key = index + 1;
                             return (
                                 <Breadcrumb.Item href={item.path} key={key}>
                                     {item.label}
                                 </Breadcrumb.Item>
-                            )
+                            );
                         })}
                     </Breadcrumb>
                     <div className={styles.accountDetails}>
@@ -94,10 +94,10 @@ export default function PageLayout({ children, breadcrumbs }) {
                                 className={styles.button}
                                 disabled={isWeb3EnableLoading}
                                 onClick={async () => {
-                                    await enableWeb3()
+                                    await enableWeb3();
                                     typeof window !== "undefined"
                                         ? window.localStorage.setItem("connected", "injected")
-                                        : null
+                                        : null;
                                 }}
                             >
                                 Connect Metamask
@@ -118,5 +118,5 @@ export default function PageLayout({ children, breadcrumbs }) {
                 Rather Labs Survey ©2022 Created by Fer Leiva
             </Footer>
         </Layout>
-    )
+    );
 }

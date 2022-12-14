@@ -1,6 +1,6 @@
 .generalLayout {
-  min-height: 750px;
-  text-align: center;
+    min-height: 750px;
+    text-align: center;
 }
 
 .userGuide {
@@ -10,7 +10,7 @@
 
 .accountDetails {
     display: flex;
-    gap: 18px
+    gap: 18px;
 }
 
 .button {
