@@ -33,8 +33,8 @@ export default function ReceiveButton() {
   const handleClick = async () => {
     if (account && isWeb3Enabled) {
       await submit();
-      let tokenAmountNew = await balanceOf();
-      let quizTokenAmount = parseInt(tokenAmountNew._hex);
+      const tokenAmountNew = await balanceOf();
+      const quizTokenAmount = parseInt(tokenAmountNew._hex);
       setTokenAmount(tokenAmount + Math.ceil(quizTokenAmount / 1000000000000000000));
       router.push("/");
     } else {
