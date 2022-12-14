@@ -1,6 +1,7 @@
 import React from "react";
-import PageLayout from "../components/commons/PageLayout/PageLayout";
 import Head from "next/head.js";
+import PageLayout from "../components/commons/PageLayout/PageLayout";
+import VerifyButton from "../components/VerifyButton/VerifyButton.jsx";
 
 const Home: React.FC = () => {
   const breadcrumbs = [
@@ -23,6 +24,7 @@ const Home: React.FC = () => {
           We are happy to have you! Please make sure you have your Metamask Wallet connected to
           Goerli network before we proceed.
         </p>
+        <VerifyButton />
       </PageLayout>
     </>
   );
