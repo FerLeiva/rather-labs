@@ -10,8 +10,6 @@ A client can access through their Metamask wallet and take the survey of the day
 
 The application uses moralis for blockchain connection and obtains the necessary information from your metamask wallet to be able to carry out the different internal transactions of the contract. Token balance information is also obtained from the contract. The surveys are consumed through JSON files, and can be easily created and dynamically editable.
 
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
 # Multimedia
 
 You can watch a video of the application process through the following link:
@@ -20,14 +18,23 @@ https://www.loom.com/share/901c94f3f9d149e7a58c890fdddfcaef
 
 Here are some snapshots of the app:
 
+#Desktop:
+
 ![image](https://user-images.githubusercontent.com/66581357/207750478-f8f2cfdf-d320-4c91-a8c8-463fe700a8d7.png)
 
 ![image](https://user-images.githubusercontent.com/66581357/207750531-a6193e57-7157-4aab-b67e-6a61852d2cba.png)
 
 ![image](https://user-images.githubusercontent.com/66581357/207750574-0bb42c61-4a17-415a-a5a0-b1244fc50f97.png)
 
+#Mobile:
+
+![image](https://user-images.githubusercontent.com/66581357/207753955-dae7ba1d-b179-4e63-adcf-009147bb9747.png)
+![image](https://user-images.githubusercontent.com/66581357/207754046-421d299e-cdbe-473d-970f-eb9bb05706df.png)
+![image](https://user-images.githubusercontent.com/66581357/207754155-1a6ecbc7-d898-4c25-948d-6c1987424310.png)
 
 ## Getting Started Locally
+
+This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 First, run the development server:
 
