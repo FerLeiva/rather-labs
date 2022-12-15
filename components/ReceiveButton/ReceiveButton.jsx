@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { useMoralis, useWeb3Contract } from "react-moralis";
 import { Button } from "antd";
