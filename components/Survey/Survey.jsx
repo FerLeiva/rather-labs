@@ -66,7 +66,7 @@ export default function Survey({ questions }) {
             <div className={styles.imageContainer}>
               <Image height={300} src={questions[step].image} />
             </div>
-            <Radio.Group onChange={onChange} value={value}>
+            <Radio.Group className={styles.radioContainer} onChange={onChange} value={value}>
               {questions[step].options.map((option, index) => (
                 <Radio value={index} key={index}>
                   {option.text}
