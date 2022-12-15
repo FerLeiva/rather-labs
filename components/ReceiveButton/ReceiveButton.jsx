@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { useRouter } from "next/router";
 import { useMoralis, useWeb3Contract } from "react-moralis";
 import { Button } from "antd";
@@ -8,7 +7,7 @@ import useAppContext from "../../context/Context";
 export default function ReceiveButton() {
   const router = useRouter();
   const { account, isWeb3Enabled } = useMoralis();
-  const { tokenAmount, setTokenAmount, answers, setAnswers } = useAppContext();
+  const { tokenAmount, setTokenAmount, answers } = useAppContext();
 
   const { runContractFunction: balanceOf } = useWeb3Contract({
     abi: abi,
@@ -41,8 +40,6 @@ export default function ReceiveButton() {
       router.push("/");
     }
   };
-
-  useEffect(() => () => setAnswers([]), []);
 
   return (
     <>

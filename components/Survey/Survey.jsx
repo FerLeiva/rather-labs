@@ -45,7 +45,7 @@ export default function Survey({ questions }) {
         <>
           <h1 className={styles.title}>Your answers summary</h1>
           <div className={styles.answersContainer}>
-            {answers.map((answer, index) => {
+            {answers.map((answer, index) => (
               <div className={styles.answer} key={index}>
                 <h3>
                   Question number {index + 1}: {questions[index].text}
@@ -54,8 +54,8 @@ export default function Survey({ questions }) {
                 <p>
                   <strong>Answer:</strong> {questions[index].options[answer].text}
                 </p>
-              </div>;
-            })}
+              </div>
+            ))}
           </div>
         </>
       ) : (
@@ -67,11 +67,11 @@ export default function Survey({ questions }) {
               <Image height={300} src={questions[step].image} />
             </div>
             <Radio.Group onChange={onChange} value={value}>
-              {questions[step].options.map((option, index) => {
+              {questions[step].options.map((option, index) => (
                 <Radio value={index} key={index}>
                   {option.text}
-                </Radio>;
-              })}
+                </Radio>
+              ))}
             </Radio.Group>
           </div>
         </>
