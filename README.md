@@ -18,19 +18,18 @@ https://www.loom.com/share/901c94f3f9d149e7a58c890fdddfcaef
 
 Here are some snapshots of the app:
 
-#Desktop:
+## Desktop:
 
 ![image](https://user-images.githubusercontent.com/66581357/207750478-f8f2cfdf-d320-4c91-a8c8-463fe700a8d7.png)
-
 ![image](https://user-images.githubusercontent.com/66581357/207750531-a6193e57-7157-4aab-b67e-6a61852d2cba.png)
-
 ![image](https://user-images.githubusercontent.com/66581357/207750574-0bb42c61-4a17-415a-a5a0-b1244fc50f97.png)
 
-#Mobile:
+## Mobile:
 
 ![image](https://user-images.githubusercontent.com/66581357/207753955-dae7ba1d-b179-4e63-adcf-009147bb9747.png)
 ![image](https://user-images.githubusercontent.com/66581357/207754046-421d299e-cdbe-473d-970f-eb9bb05706df.png)
 ![image](https://user-images.githubusercontent.com/66581357/207754155-1a6ecbc7-d898-4c25-948d-6c1987424310.png)
+![image](https://user-images.githubusercontent.com/66581357/207754475-8abe8de8-32e2-4b8b-9a17-a94e43d37ee0.png)
 
 ## Getting Started Locally
 
