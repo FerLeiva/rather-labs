@@ -23,12 +23,18 @@
 .answersContainer {
   display: grid;
   grid-template-columns: 1fr 1fr;
-  row-gap: 80px;
+  row-gap: 16px;
+  @media (--breakpoint) {
+    row-gap: 80px;
+  }
 }
 
 .answer {
-  margin: 0 40px;
   background: #f8f7f7;
+  margin: 0 8px;
+  @media (--breakpoint) {
+    margin: 0 40px;
+  }
 }
 
 .answersFlex {
