@@ -71,7 +71,7 @@ export default function PageLayout({ children, breadcrumbs }) {
           Rather Labs
         </Menu>
       </Header>
-      <Content style={{ padding: "0 50px" }}>
+      <Content className={styles.pageContainer}>
         <div className={styles.userGuide}>
           <Breadcrumb style={{ margin: "16px 0" }}>
             {breadcrumbs.map((item, index) => {
