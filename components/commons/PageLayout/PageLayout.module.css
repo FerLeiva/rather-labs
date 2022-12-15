@@ -3,16 +3,33 @@
   text-align: center;
 }
 
+.pageContainer {
+  @media (--breakpoint) {
+    padding: "0 50px";
+  }
+}
+
 .userGuide {
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  @media (--breakpoint) {
+    justify-content: space-between;
+  }
 }
 
 .accountDetails {
   display: flex;
-  gap: 18px;
+  justify-content: center;
+  flex-wrap: wrap;
+  @media (--breakpoint) {
+    gap: 18px;
+  }
 }
 
 .button {
-  margin-top: 24px;
+  margin-top: 16px;
+  @media (--breakpoint) {
+    margin-top: 24px;
+  }
 }
