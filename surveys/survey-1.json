@@ -1,0 +1,70 @@
+{
+  "title": "Sample Survey",
+  "image": "https://cdn.pixabay.com/photo/2015/02/07/10/10/giraffes-627031_960_720.jpg",
+  "questions": [
+    {
+      "text": "Favourite transport?",
+      "image": "https://images.pexels.com/photos/681335/pexels-photo-681335.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "lifetimeSeconds": 10,
+      "options": [
+        {
+          "text": "Car"
+        },
+        {
+          "text": "Truck"
+        },
+        {
+          "text": "Train"
+        }
+      ]
+    },
+    {
+      "text": "Which is the best color?",
+      "image": "https://images.pexels.com/photos/1191710/pexels-photo-1191710.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "lifetimeSeconds": 15,
+      "options": [
+        {
+          "text": "Blue"
+        },
+        {
+          "text": "Red"
+        },
+        {
+          "text": "Green"
+        },
+        {
+          "text": "Yellow"
+        }
+      ]
+    },
+    {
+      "text": "What do you want to eat?",
+      "image": "https://images.pexels.com/photos/1640772/pexels-photo-1640772.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      "lifetimeSeconds": 5,
+      "options": [
+        {
+          "text": "Meat"
+        },
+        {
+          "text": "Chicken"
+        },
+        {
+          "text": "Salad"
+        }
+      ]
+    },
+    {
+      "text": "Dogs or cats?",
+      "image": "https://cdn.pixabay.com/photo/2017/02/12/10/11/dog-2059668_960_720.jpg",
+      "lifetimeSeconds": 7,
+      "options": [
+        {
+          "text": "Dogs"
+        },
+        {
+          "text": "Cats"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+.button {
+  margin: 24px;
+}
+
+.error {
+  color: red;
+  font-size: 12px;
+  margin: 0;
+}

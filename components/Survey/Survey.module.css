@@ -1,0 +1,39 @@
+.surveyContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cooldown{
+    font-style: italic;
+    font-size: 14px;
+    padding: 12px;
+    margin: 0;
+}
+
+.title{
+    font-size: 30px;
+    padding: 20px 0 10px;
+}
+
+.answersContainer{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 80px;
+}
+
+.answer{
+    margin: 0 40px;
+    background: #F8F7F7;
+}
+
+.answersFlex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.buttonContainer{
+    padding: 18px;
+}

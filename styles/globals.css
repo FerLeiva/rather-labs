@@ -2,8 +2,8 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell,
+    Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
 a {
@@ -15,12 +15,27 @@ a {
   box-sizing: border-box;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+.title {
+  font-size: 30px;
+  padding: 0 24px;
+}
+
+.surveyImage {
+  max-height: 250px;
+  width: auto;
+}
+
+.subtitle {
+  font-size: 16px;
+  padding: 12px 15% 0;
+}
+
+.button {
+  margin: 24px;
+}
+
+.accountNumber {
+  text-align: right;
+  font-size: 12px;
+  padding: 12px 24px;
 }
